@@ -3,7 +3,7 @@ function Home() {
     <section className="relative min-h-[calc(100vh-80px)] overflow-hidden group">
       {/* IMAGE MOBILE */}
       <img
-        src="/src/assets/images/presentation.jpeg"
+        src="/images/presentation.jpeg"
         alt="Harry Potter mobile"
         className="
           absolute inset-0
@@ -17,7 +17,7 @@ function Home() {
          Image centrée + largeur volontairement réduite
       */}
       <img
-        src="/src/assets/images/Harry_Potter_04.jpg"
+        src="/images/Harry_Potter_04.jpg"
         alt="Harry Potter desktop"
         className="
           absolute inset-0
