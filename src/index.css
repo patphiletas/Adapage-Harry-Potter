@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'HarryP';
+  src: url('./assets/fonts/HarryP.TTF') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-harryp {
+  font-family: 'HarryP', serif;
+}
