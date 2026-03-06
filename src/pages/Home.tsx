@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden group">
+    <section className="relative min-h-[calc(100vh-112px)] overflow-hidden group rounded-lg">
       {/* IMAGE MOBILE */}
       <img
         src="/images/presentation.jpeg"
@@ -25,19 +25,19 @@ function Home() {
           object-cover
 
           
-          max-w-300
+          max-w-[1200px]
           mx-auto
           left-1/2 -translate-x-1/2
 
           
-          scale-110
-          group-hover:scale-125
-          transition-transform duration-3000 ease-out
+          scale-105
+          group-hover:scale-110
+          transition-transform duration-[2200ms] ease-out
         "
       />
 
       {/* CONTENEUR TEXTE */}
-      <div className="relative z-10 flex h-full items-end p-6 md:p-16">
+      <div className="relative z-10 flex h-full items-end p-4 md:p-10">
         {/* WRAPPER CENTRAL */}
 
         <div className="w-full md:max-w-4xl mx-auto">
@@ -57,18 +57,18 @@ function Home() {
           >
             <p
               className="
-                text-lg md:text-xl
-                leading-[1.85]
+                text-base md:text-lg
+                leading-[1.7]
                 font-HarryP
+                max-w-[60ch]
 
                 /* Lettrine */
-                first-letter:text-7xl
-                md:first-letter:text-8xl
-                lg:first-letter:text-9xl
+                first-letter:text-6xl
+                md:first-letter:text-7xl
 
                 first-letter:font-bold
                 first-letter:float-left
-                first-letter:mr-4
+                first-letter:mr-3
                 first-letter:-mt-1
                 first-letter:text-yellow-500
               "

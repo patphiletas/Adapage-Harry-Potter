@@ -9,10 +9,10 @@ function ChronologiePage() {
 
   return (
     // SECTION PAGE — centrée
-    <section className="relative py-10 md:py-20 max-w-940px mx-auto px-4">
+    <section className="relative py-8 md:py-12 max-w-[940px] mx-auto px-4">
       
       {/* TITRE */}
-      <h1 className="text-red-900 text-4xl font-black text-center mb-12">
+      <h1 className="text-red-900 text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-10 tracking-wide">
         Quelques dates importantes
       </h1>
 
@@ -21,10 +21,10 @@ function ChronologiePage() {
       <div className="relative">
 
         {/* AXE CENTRAL */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-3 bg-yellow-400 z-0" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1.5 bg-yellow-400/90 z-0" />
 
         {/*  LISTE DES CARTES */}
-        <div className="flex flex-col space-y-12 md:space-y-20">
+        <div className="flex flex-col space-y-8 md:space-y-12">
 
           {chronologie.map((item, index) => {
             const isLeft = index % 2 === 0;
@@ -45,8 +45,8 @@ function ChronologiePage() {
                     relative
                     w-full max-w-md
                     ${isLeft
-                      ? "md:-translate-x-24"
-                      : "md:translate-x-24"}
+                      ? "md:-translate-x-20"
+                      : "md:translate-x-20"}
                   `}
                 >
                   {/* 
@@ -72,32 +72,32 @@ function ChronologiePage() {
 
       {/* MODAL — LIRE PLUS */}
       {activeItem && (
-        <div className="fixed inset-5 z-50 flex items-center justify-center bg-black/60">
-          <div className="relative bg-white rounded-xl max-w-3xl w-full mx-4 p-6 md:p-8">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="relative bg-white rounded-lg border border-slate-200 max-w-3xl w-full p-5 md:p-6 shadow-lg">
 
             {/* Bouton fermer */}
             <button
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 text-red-800 font-semibold hover:underline"
+              className="absolute top-3.5 right-4 text-red-800 text-sm font-medium hover:underline"
             >
               Fermer
             </button>
 
-            <h2 className="text-2xl font-black mb-1">
+            <h2 className="text-xl md:text-2xl font-semibold text-slate-900 mb-1">
               {activeItem.titre}
             </h2>
 
-            <p className="text-gray-500 mb-4">
+            <p className="text-sm text-slate-500 mb-3.5">
               {activeItem.date}
             </p>
 
             <img
               src={activeItem.photo}
               alt={activeItem.titre}
-              className="w-full rounded-lg mb-4"
+              className="w-full rounded-md mb-3.5"
             />
 
-            <p className="leading-relaxed text-gray-800">
+            <p className="text-sm leading-relaxed text-slate-800">
               {activeItem.description}
             </p>
           </div>

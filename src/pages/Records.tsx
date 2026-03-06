@@ -7,13 +7,13 @@ function RecordsPage() {
   const [activeItem, setActiveItem] = useState<RecordItem | null>(null);
 
   return (
-    <section className="bg-red-900 py-12 px-6 rounded-3xl max-w-7xl mx-auto">
-      <h1 className="text-white text-3xl font-bold text-center mb-8">
+    <section className="bg-gradient-to-br from-red-900 to-red-800 py-8 md:py-10 px-4 md:px-6 rounded-xl max-w-6xl mx-auto shadow-sm">
+      <h1 className="text-white text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-7 tracking-wide">
         Records de Harry Potter
       </h1>
 
       {/* GRID */}
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+      <div className="grid gap-4 md:gap-5 grid-cols-1 md:grid-cols-2">
         {records.map((item: RecordItem) => (
           <Card
             key={item.id}
@@ -28,27 +28,27 @@ function RecordsPage() {
 
       {/*MODAL LIRE PLUS*/}
       {activeItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-          <div className="relative bg-white rounded-xl max-w-2xl w-full mx-4 p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="relative bg-white rounded-lg border border-slate-200 max-w-2xl w-full p-5 md:p-6 shadow-lg">
             {/* Fermer */}
             <button
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 text-red-800 font-semibold hover:underline"
+              className="absolute top-3.5 right-4 text-red-800 text-sm font-medium hover:underline"
             >
               Fermer
             </button>
 
-            <h2 className="text-2xl font-black mb-1">{activeItem.titre}</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-slate-900 mb-1">{activeItem.titre}</h2>
 
-            <p className="text-gray-500 mb-4">{activeItem.date}</p>
+            <p className="text-sm text-slate-500 mb-3.5">{activeItem.date}</p>
 
             <img
               src={activeItem.photo}
               alt={activeItem.titre}
-              className="w-full rounded-lg mb-4"
+              className="w-full rounded-md mb-3.5"
             />
 
-            <p className="leading-relaxed text-gray-800">
+            <p className="text-sm leading-relaxed text-slate-800">
               {activeItem.description}
             </p>
           </div>
