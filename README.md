@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# Harry Potter Adapage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="./public/images/logo.png" alt="Logo Harry Potter Adapage" width="320" />
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://adapage-harry-potter.vercel.app/">
+    <img src="https://img.shields.io/badge/Deploiement-Vercel-black?style=for-the-badge&logo=vercel" alt="Deploiement Vercel" />
+  </a>
+  <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  Mini site web dedie a l'univers de Harry Potter, developpe en projet collectif avec Chau-Nguyen Chi.
+</p>
 
-## React Compiler
+## Apercu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ce projet propose une presentation visuelle et interactive autour de Harry Potter. L'application met en avant plusieurs contenus marquants de l'univers du personnage a travers une interface moderne construite avec React, TypeScript et Vite.
 
-## Expanding the ESLint configuration
+Le site est accessible ici :
+<br />
+<a href="https://adapage-harry-potter.vercel.app/"><strong>https://adapage-harry-potter.vercel.app/</strong></a>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<p align="center">
+  <img src="./public/images/presentation.jpeg" alt="Apercu du projet Harry Potter Adapage" width="800" />
+</p>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Contenu du site
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Une page d'accueil immersive avec visuel de presentation
+- Une chronologie des dates importantes autour de Harry Potter
+- Une section dediee aux records marquants
+- Une galerie de formules magiques emblematiques
+- Des cartes interactives avec modales "Lire plus"
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Stack technique
+
+- `React 19`
+- `TypeScript`
+- `Vite`
+- `React Router DOM`
+- `Tailwind CSS`
+- `ESLint`
+
+## Installation
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Lancer le projet en local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Le projet sera disponible sur `http://localhost:5173`.
+
+## Scripts utiles
+
+```bash
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
+
+## Structure du projet
+
+```text
+src/
+  components/
+  data/
+  pages/
+  type/
+public/
+  images/
+```
+
+## Projet collectif
+
+Ce projet a ete realise en collaboration avec **Chau-Nguyen Chi** dans le cadre d'un travail collectif.
+
+## Deploiement
+
+L'application est deployee sur Vercel :
+<br />
+<a href="https://adapage-harry-potter.vercel.app/">adapage-harry-potter.vercel.app</a>
+
+## Auteur
+
+- Patrice Philetas
+- Chau-Nguyen Chi
